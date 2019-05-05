@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <div class="container-fluid">
+    <div class="hero"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- Form Start -->
+    <form action="post">
+      <div class="form-row">
+        <div class="about">
+
+          <h3>About You</h3>
+          <div class="col-md-4">
+            <input type="text" id="name" class="form-control" placeholder="Name" required>
+          </div>
+
+          <div class="col-md-4">
+            <input type="text" id="photo" class="form-control" placeholder="Link to an Image" required>
+          </div>
+
+          <div class="col-md-4">
+            <input type="text-area" id="message" class="form-control" placeholder="A Short Message">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="questions col-auto">
+          <hr>
+          <h4>Indecate your interest on a scale from 1 to 5:</h4>
+          <h3><strong>Q: 1</strong></h3>
+          <h4>Star Trek The Original Searies</h4>
+          <select class="form-control" id="q1">
+            <option value=""></option>
+            <option value="1">1 (Very Uninterested)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very Interested)</option>
+          </select>
+
+          <h3><strong>Q: 2</strong></h3>
+          <h4>Star Trek The Next Generation</h4>
+          <select class="form-control" id="q2">
+            <option value=""></option>
+            <option value="1">1 (Very Uninterested)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very Interested)</option>
+          </select>
+
+          <h3><strong>Q: 3</strong></h3>
+          <h4>Star Trek Deep Space Nine</h4>
+          <select class="form-control" id="q3">
+            <option value=""></option>
+            <option value="1">1 (Very Uninterested)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very Interested)</option>
+          </select>
+
+          <h3><strong>Q: 4</strong></h3>
+          <h4>Star Trek Voyagar</h4>
+          <select class="form-control" id="q4">
+            <option value=""></option>
+            <option value="1">1 (Very Uninterested)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very Interested)</option>
+          </select>
+
+          <hr>
+          <h4>How much do you agree with the following statements:</h4>
+
+          <h3><strong>Q: 5</strong></h3>
+          <h4>"Jean-Luc Picard is better than James Tiberius Kirk"</h4>
+          <select class="form-control" id="q5">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <h3><strong>Q: 6</strong></h3>
+          <h4>"The campiness of Star Trek makes the show great."</h4>
+          <select class="form-control" id="q6">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <h3><strong>Q: 7</strong></h3>
+          <h4>"The philosophical questions posed in Star Trek make the show great."</h4>
+          <select class="form-control" id="q7">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <h3><strong>Q: 8</strong></h3>
+          <h4>"The Prime Directive is a moral guiding principal and should never be violated."</h4>
+          <select class="form-control" id="q8">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <hr>
+
+          <h3><strong>Q: 9</strong></h3>
+          <h4>Which of the following is your favorite Next Gen adversary</h4>
+          <select class="form-control" id="q9">
+            <option value=""></option>
+            <option value="1">Q</option>
+            <option value="2">Professor James Moriarty</option>
+            <option value="3">Lore</option>
+            <option value="4">The Duras Sisters</option>
+            <option value="5">Dr. Soran</option>
+          </select>
+
+          <h3><strong>Q: 10</strong></h3>
+          <h4>Which of the following is your favorite enemy race</h4>
+          <select class="form-control" id="q10">
+            <option value=""></option>
+            <option value="1">The Klingons (pre Khitomer Accords)</option>
+            <option value="2">The Cardassians</option>
+            <option value="3">The Romulans</option>
+            <option value="4">The Dominion</option>
+            <option value="5">The Borg</option>
+          </select>
+
+          <!-- Submit Button -->
+          <br>
+          <button type="submit" class="btn btn-primary btn-lg" id="submit"><i
+              class="fas fa-hand-spock"></i>Submit</button>
+          <button type="submit" class="btn btn-primary btn-lg" id="submit" data-toggle="modal"
+            data-target="#results-modal">
+            Submit</button>
+          <hr>
+
+        </div>
+      </div>
+    </form>
+    <!-- Form End -->
+
+    <br>
+    <br>
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub
+            Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title"><strong>Best Match</strong></h3>
+
+          <!-- Match content -->
+          <div class="match-content">
+            <h2 id="match-name">Jessi</h2>
+            <div class="match-content-main text-center">
+              <img id="match-img" class="img-thumbnail mx-auto d-block" src="http://placehold.it/150x150" alt="">
+              <h4 id="match-message" class="match-content-message">Resistance is futile</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    // Capture the form inputs
+    $("#submit").on("click", function (e) {
+      e.preventDefault();
+
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          message: $("#message").val().trim(),
+          scores: [
+            parseInt($("#q1").val(), 10),
+            parseInt($("#q2").val(), 10),
+            parseInt($("#q3").val(), 10),
+            parseInt($("#q4").val(), 10),
+            parseInt($("#q5").val(), 10),
+            parseInt($("#q6").val(), 10),
+            parseInt($("#q7").val(), 10),
+            parseInt($("#q8").val(), 10),
+            parseInt($("#q9").val(), 10),
+            parseInt($("#q10").val(), 10)
+          ]
+        };
+
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userData, function (data) {
+          console.log(JSON.stringify(data))
+
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+          $("#match-message").text(data.message);
+
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
+          // console.log(userData);
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+      $("form").reset();
+    });
+
+  </script>
+
+</body>
+
+</html>

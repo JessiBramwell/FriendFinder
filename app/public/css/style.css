@@ -1,0 +1,62 @@
+body {
+  background-color: black;
+  color: #eee
+}
+
+h1,h2,h3, button {
+  font-family: 'Bungee', cursive;
+}
+h1 {
+  font-size: 6rem;
+}
+
+hr {
+  margin: 4rem 0;
+}
+
+.hero {
+  background-image: url(../img/star-trek-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  background-position: center;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.about {
+  margin: 8rem 0
+}
+
+.about h3 {
+  margin: 2rem;
+}
+
+form button {
+  margin: 5rem 0;
+}
+
+.questions .form-control {
+  width: 40%;
+}
+
+.modal-content {
+  background-image: url(../img/modal.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 500px; 
+}
+
+.modal-title {
+  margin-top: 2.3rem
+}
+
+.match-content {
+  padding-top: 2rem;
+  max-height: 100%;
+}
+
+.match-content-message {
+  padding: 6rem;
+}
