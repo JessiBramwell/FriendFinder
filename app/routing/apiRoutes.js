@@ -11,7 +11,7 @@ module.exports = function (app) {
     var index;
 
     // compair(friendsData, req.body)
-    
+
 
     // friendsData.push(req.body);
     // res.json(friendsData[index]);
@@ -35,14 +35,15 @@ module.exports = function (app) {
       friendsScoreArr.push(rating)
     });
 
-    // Finds the index of the lowest score
+    // Finds the index of the lowest score    
     index = friendsScoreArr.indexOf(Math.min(...friendsScoreArr));
+    result = friendsScoreArr[[index]]
+
+    // Calculate compatibility
+    friendsData[index].compatibility = 100 - (result * 2.5);
 
     // Adds the new user to the data
     friendsData.push(req.body);
-
-    // console.log(index);
-    // console.log(friendsData[index]);
 
     // returns the match at the correct index to the html
     res.json(friendsData[index]);

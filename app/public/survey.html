@@ -170,10 +170,7 @@
           <!-- Submit Button -->
           <br>
           <button type="submit" class="btn btn-primary btn-lg" id="submit"><i
-              class="fas fa-hand-spock"></i>Submit</button>
-          <button type="submit" class="btn btn-primary btn-lg" id="submit" data-toggle="modal"
-            data-target="#results-modal">
-            Submit</button>
+              class="fas fa-hand-spock"></i>Submit</button>        
           <hr>
 
         </div>
@@ -204,11 +201,18 @@
           <h3 class="modal-title"><strong>Best Match</strong></h3>
 
           <!-- Match content -->
-          <div class="match-content">
-            <h2 id="match-name">Jessi</h2>
-            <div class="match-content-main text-center">
-              <img id="match-img" class="img-thumbnail mx-auto d-block" src="http://placehold.it/150x150" alt="">
-              <h4 id="match-message" class="match-content-message">Resistance is futile</h4>
+          <div class="container-fluid">
+            <div class="match-content row">
+              <div class="col-md-3">
+                <h2 id="match-percent"></h2>
+              </div>
+
+              <div class="match-content-main col-md-6 text-center">
+                <h2 id="match-name"></h2>
+                <img id="match-img" class="img-thumbnail mx-auto d-block" src="http://placehold.it/150x150" alt="">
+                <h4 id="match-message" class="match-content-message"></h4>
+              </div>
+
             </div>
           </div>
 
@@ -259,16 +263,16 @@
 
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function (data) {
-          console.log(JSON.stringify(data))
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-percent").text(data.compatibility + '%');
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
           $("#match-message").text(data.message);
 
           // Show the modal with the best match
           $("#results-modal").modal("toggle");
-          // console.log(userData);
+          ;
         });
       } else {
         alert("Please fill out all fields before submitting!");
