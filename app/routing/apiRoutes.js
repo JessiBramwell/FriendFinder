@@ -37,9 +37,9 @@ module.exports = function (app) {
 
     // Finds the index of the lowest score    
     index = friendsScoreArr.indexOf(Math.min(...friendsScoreArr));
-    result = friendsScoreArr[[index]]
+    result = friendsScoreArr[index]
 
-    // Calculate compatibility
+    // Calculate compatibility and add key/value par to user object
     friendsData[index].compatibility = 100 - (result * 2.5);
 
     // Adds the new user to the data
