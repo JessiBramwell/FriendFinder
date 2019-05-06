@@ -28,7 +28,7 @@
   <div class="container">
 
     <!-- Form Start -->
-    <form action="post">
+    <form action="post" id="survey">
       <div class="form-row">
         <div class="about">
 
@@ -169,8 +169,8 @@
 
           <!-- Submit Button -->
           <br>
-          <button type="submit" class="btn btn-primary btn-lg" id="submit"><i
-              class="fas fa-hand-spock"></i>Submit</button>        
+          <button type="submit" class="btn btn-primary btn-lg" id="submit"><i class="fas fa-hand-spock"></i>
+            Submit</button>
           <hr>
 
         </div>
@@ -183,7 +183,8 @@
 
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/JessiBramwell/FriendFinder">GitHub
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/JessiBramwell/FriendFinder"
+            target="_blank">GitHub
             Repo</a></p>
       </div>
     </footer>
@@ -248,16 +249,16 @@
           photo: $("#photo").val(),
           message: $("#message").val().trim(),
           scores: [
-            parseInt($("#q1").val(), 10),
-            parseInt($("#q2").val(), 10),
-            parseInt($("#q3").val(), 10),
-            parseInt($("#q4").val(), 10),
-            parseInt($("#q5").val(), 10),
-            parseInt($("#q6").val(), 10),
-            parseInt($("#q7").val(), 10),
-            parseInt($("#q8").val(), 10),
-            parseInt($("#q9").val(), 10),
-            parseInt($("#q10").val(), 10)
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
           ]
         };
 
@@ -277,7 +278,7 @@
       } else {
         alert("Please fill out all fields before submitting!");
       }
-      $("form").reset();
+      $("#survey")[0].reset();
     });
 
   </script>
