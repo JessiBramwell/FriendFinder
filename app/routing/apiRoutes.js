@@ -10,13 +10,6 @@ module.exports = function (app) {
   app.post('/api/friends', function (req, res) {
     var index;
 
-    // compair(friendsData, req.body)
-
-
-    // friendsData.push(req.body);
-    // res.json(friendsData[index]);
-    // console.log(friendsData[index]);
-
     // Collects computed scores for each user
     var friendsScoreArr = [];
 
@@ -50,25 +43,3 @@ module.exports = function (app) {
   });
 }
 
-// function compair(arr, user) {
-//   var friendsScoreArr = [];
-
-//   arr.forEach((friend) => {
-//     var compairArr = []
-//     var rating = 0;
-
-//     for (let i = 0; i < 10; i++) {
-//       var difference = parseInt(friend.scores[i]) - parseInt(user.scores[i]);
-//       compairArr.push(difference)
-//     }
-
-//     compairArr.forEach((x) => { rating += Math.abs(x) });
-//     friendsScoreArr.push(rating)
-//   });
-
-//   index = friendsScoreArr.indexOf(Math.min(...friendsScoreArr));
-
-//   console.log(friendsScoreArr);
-//   console.log(index);
-//   return index;
-// }
